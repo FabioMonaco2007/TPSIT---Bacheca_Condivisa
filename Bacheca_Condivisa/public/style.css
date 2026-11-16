@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+}
+
+/* Indicatore visivo dello stato del WebSocket */
+#stato-connessione {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.connesso {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.disconnesso {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Barra inserimento dati */
+.pannello-controllo {
+    display: flex;
+    gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto 15px auto;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.pannello-controllo input, .pannello-controllo select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#input-testo {
+    flex-grow: 1; /* Occupa tutto lo spazio disponibile */
+}
+
+button, .btn-secondario {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+#btn-aggiungi {
+    background-color: #007bff;
+    color: white;
+}
+
+#btn-aggiungi:hover {
+    background-color: #0056b3;
+}
+
+.azioni-express {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+}
+
+.btn-secondario {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-pericolo {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Griglia dei Post-it */
+.lavagna {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Stile singolo Post-it */
+.post-it {
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.post-it:hover {
+    transform: scale(1.03);
+}
+
+/* Colori dei post-it */
+.giallo  { background-color: #fff740; }
+.verde   { background-color: #7afcff; }
+.rosa    { background-color: #ff7eb9; }
+.azzurro { background-color: #a8e6cf; }
+
+.post-it-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.btn-elimina {
+    background: none;
+    border: none;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 5px;
+    font-size: 1.1rem;
+}
+
+.btn-elimina:hover {
+    color: #d00;
+}
+
+.post-it-testo {
+    font-size: 1.05rem;
+    word-wrap: break-word;
+    flex-grow: 1;
+}

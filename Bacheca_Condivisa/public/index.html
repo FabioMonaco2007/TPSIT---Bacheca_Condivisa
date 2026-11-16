@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacheca Condivisa - WebSocket</title>
+    <!-- Collegamento al foglio di stile servito da Express -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bacheca Idee di Gruppo</h1>
+        <div id="stato-connessione" class="disconnesso">Connessione in corso...</div>
+    </header>
+
+    <!-- Barra di controllo per creare nuovi post-it -->
+    <section class="pannello-controllo">
+        <input type="text" id="input-autore" placeholder="Il tuo nome..." maxlength="20">
+        <input type="text" id="input-testo" placeholder="Scrivi un'idea o un compito..." maxlength="150">
+        
+        <select id="select-colore">
+            <option value="giallo">Giallo (Idea)</option>
+            <option value="verde">Verde (Da fare)</option>
+            <option value="rosa">Rosa (Urgente)</option>
+            <option value="azzurro">Azzurro (Nota)</option>
+        </select>
+
+        <button id="btn-aggiungi">Aggiungi Post-it</button>
+    </section>
+
+    <!-- Pulsanti che sfruttano le rotte HTTP Express -->
+    <section class="azioni-express">
+        <a href="/api/esporta" class="btn-secondario">Scarica Appunti (.txt)</a>
+        <button id="btn-svuota" class="btn-pericolo">Svuota Bacheca</button>
+    </section>
+
+    <!-- Contenitore dove JavaScript inserirà dinamicamente i post-it -->
+    <main id="lavagna" class="lavagna"></main>
+
+    <!-- Collegamento allo script client che gestisce il WebSocket -->
+    <script src="client.js"></script>
+</body>
+</html>
