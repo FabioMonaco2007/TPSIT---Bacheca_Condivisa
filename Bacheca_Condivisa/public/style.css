@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #f0f2f5;
+    background-color: #e9e9e9;
     margin: 0;
     padding: 20px;
     color: #333;
@@ -18,7 +18,6 @@ header {
     margin: 0 auto 20px auto;
 }
 
-/* Indicatore visivo dello stato del WebSocket */
 #stato-connessione {
     padding: 6px 12px;
     border-radius: 20px;
@@ -33,10 +32,9 @@ header {
 
 .disconnesso {
     background-color: #f8d7da;
-    color: #721c24;
+    color: #d63434;
 }
 
-/* Barra inserimento dati */
 .pannello-controllo {
     display: flex;
     gap: 10px;
@@ -56,7 +54,7 @@ header {
 }
 
 #input-testo {
-    flex-grow: 1; /* Occupa tutto lo spazio disponibile */
+    flex-grow: 1;
 }
 
 button, .btn-secondario {
@@ -92,11 +90,10 @@ button, .btn-secondario {
 }
 
 .btn-pericolo {
-    background-color: #dc3545;
+    background-color: #d63434;
     color: white;
 }
 
-/* Griglia dei Post-it */
 .lavagna {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -105,7 +102,6 @@ button, .btn-secondario {
     margin: 0 auto;
 }
 
-/* Stile singolo Post-it */
 .post-it {
     padding: 15px;
     border-radius: 4px;
@@ -122,11 +118,9 @@ button, .btn-secondario {
     transform: scale(1.03);
 }
 
-/* Colori dei post-it */
 .giallo  { background-color: #fff740; }
-.verde   { background-color: #7afcff; }
-.rosa    { background-color: #ff7eb9; }
-.azzurro { background-color: #a8e6cf; }
+.rosso    { background-color: #ff5252; }
+.azzurro { background-color: #58d0ff; }
 
 .post-it-header {
     display: flex;
@@ -157,4 +151,32 @@ button, .btn-secondario {
     font-size: 1.05rem;
     word-wrap: break-word;
     flex-grow: 1;
+}
+
+.post-it-azioni {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-spunta {
+    background: none;
+    border: none;
+    color: #155724;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 5px;
+    font-size: 1.1rem;
+}
+
+.btn-spunta:hover {
+    color: #155724;
+}
+
+.post-it.completato {
+    background-color: #1cca50 !important;
+}
+
+.completato .post-it-testo {
+    text-decoration: line-through;
+    opacity: 0.75;
 }

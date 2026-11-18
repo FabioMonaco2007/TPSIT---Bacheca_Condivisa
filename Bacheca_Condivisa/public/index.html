@@ -10,7 +10,7 @@
 <body>
 
     <header>
-        <h1>Bacheca Idee di Gruppo</h1>
+        <h1>Bacheca Condivisa</h1>
         <div id="stato-connessione" class="disconnesso">Connessione in corso...</div>
     </header>
 
@@ -20,13 +20,12 @@
         <input type="text" id="input-testo" placeholder="Scrivi un'idea o un compito..." maxlength="150">
         
         <select id="select-colore">
-            <option value="giallo">Giallo (Idea)</option>
-            <option value="verde">Verde (Da fare)</option>
-            <option value="rosa">Rosa (Urgente)</option>
-            <option value="azzurro">Azzurro (Nota)</option>
+            <option value="giallo">Giallo (Avvisi/Promemoria)</option>
+            <option value="rosso">Rosso (Urgenze/Scadenze)</option>
+            <option value="azzurro">Azzurro (Note/Idee)</option>
         </select>
 
-        <button id="btn-aggiungi">Aggiungi Post-it</button>
+        <button id="btn-aggiungi">Aggiungi Post-It</button>
     </section>
 
     <!-- Pulsanti che sfruttano le rotte HTTP Express -->
